@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Video Player</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Video Player</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="palyer">
+        <video width="400" height="300" class="viewer">
+          <source src="test.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+
+      <progress id="progress" max="100" value="0" style="width:80%; margin: 0 auto;"></progress>
+
+      <div class="buttons">
+        <p class="time"></p>
+        <button class="toggle" title="Toggle Play" >►</button>
+        <input type="range" id="volume" min=0 max=100>Sound
+        <input type="range" id="rang" min=7 max=200>Top spead
+        <button data-skip="-10" class="player__button">« 10s</button>
+        <button data-skip="25" class="player__button">25s »</button>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+
+  </html>
+
+
+
+
+  </div>
+</body>
+
+</html>
