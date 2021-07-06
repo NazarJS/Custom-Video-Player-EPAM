@@ -1,22 +1,23 @@
-const player = document.querySelector(".palyer");
-const video = player.querySelector(".viewer");
-const toggle = document.querySelector(".toggle");
-const skipButtons = document.querySelectorAll("[data-skip]");
-document.querySelector("#rang").oninput = videoSpead;
-document.querySelector("#volume").oninput = videoVolume;
-let progress = document.querySelector("#progress");
+const player = document.querySelector('.palyer');
+const video = player.querySelector('.viewer');
+const toggle = document.querySelector('.toggle');
+const skipButtons = document.querySelectorAll('[data-skip]');
+const videoSpeadCont = document.querySelector('#rang');
+const videoVolumeCont = document.querySelector('#volume');
+let progress = document.querySelector('#progress');
 
+videoVolumeCont.oninput = videoVolume;
+videoSpeadCont.oninput = videoSpead;
 function showTime() {
-  document.querySelector(".time").innerHTML = video.currentTime;
+  document.querySelector('.time').innerHTML = video.currentTime;
 }
 //function start and stop video
 function togglePlay() {
   video.paused ? video.play() : video.pause();
-  // timer.innerText = Math.round(video.currentTime / video.duration * 100) + "%";
 }
 //function update the toggle
 function updateButton() {
-  const icon = this.paused ? "►" : "❚ ❚";
+  const icon = this.paused ? '►' : '❚ ❚';
   toggle.textContent = icon;
 }
 //spead controler
@@ -41,9 +42,9 @@ function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
 }
 
-video.addEventListener("click", togglePlay);
-video.addEventListener("play", updateButton);
-video.addEventListener("pause", updateButton);
-toggle.addEventListener("click", togglePlay);
+video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+toggle.addEventListener('click', togglePlay);
 
-skipButtons.forEach((button) => button.addEventListener("click", skip));
+skipButtons.forEach((button) => button.addEventListener('click', skip));

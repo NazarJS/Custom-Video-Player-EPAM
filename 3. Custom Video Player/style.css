@@ -13,11 +13,11 @@
     margin: 0 auto;
 } */
 
-video {
+.container video {
     width: 100%;
 }
 
-button {
+.container button {
     border-style: none;
     height: 40px;
     width: 60px;
